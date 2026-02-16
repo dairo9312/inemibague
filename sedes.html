@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuestra Historia - Institución Educativa INEM Ibagué</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Enlace al CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+      /* Contenedor de la Galería */
+.gallery-container {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Grid 2x2 */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Configuración de la Tarjeta (Flip Card) */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 300px; /* Altura de las imágenes */
+    perspective: 1000px; /* Necesario para el efecto 3D */
+}
+
+/* Contenedor interno que gira */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border: 2px solid #0a2a66; /* MARCO AZUL */
+    border-radius: 15px;
+}
+
+/* Giro al pasar el mouse */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Caras Frontal y Trasera */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Oculta la cara opuesta */
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo Cara Frontal (Imagen) */
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Estilo Cara Trasera (Descripción) */
+.flip-card-back {
+    background-color: #0a2a66; /* Fondo azul al girar */
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+}
+
+.flip-card-back h3 {
+    margin-bottom: 15px;
+    color: #ffc107; /* Título en amarillo para resaltar */
+}
+
+.flip-card-back p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Ajuste para móviles (1 sola columna) */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Banner -->
+    <header class="banner-history" style="background: linear-gradient(rgba(10, 42, 102, 0.2), rgba(10, 42, 102, 0.2)), 
+                        url(img/Banner.jpg);background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            color: white;
+            border-bottom: 5px solid #0d6efd;
+            clip-path: ellipse(150% 100% at 50% 0%); /* Curva inferior */;">
+    <div class="banner-inner">
+        <div class="logo">
+            <img src="img/logo-inem.png" alt="Logo INEM Ibagué">
+        </div>
+
+        <div class="banner-content">
+            <h1>Institución Educativa Técnica INEM Manuel Murillo Toro</h1>
+            <p>“Formamos personas emprendedoras para una vida digna, el trabajo creativo y la educación Superior”</p>
+        </div>
+    </div>
+</header>
+
+    <nav class="menu">
+        <ul class="menu-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="" class="active">Institución <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="history.html">Nuestra Historia</a></li>
+                    <li><a href="mision-vision.html">Misión y Visión</a></li>
+                    <li><a href="sedes.html" class="active">Sedes</a></li>
+                    <li><a href="equipo.html">Nuestro Equipo</a></li>
+                    <li><a href="mapa.html">Mapa Institucional</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" >Académico <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="https://colegiosonline.com/secure/matricula/?ie=inem" target="_blank" rel="noopener noreferrer">Matrículas</a></li>
+                    <li><a href="https://inem.colegiosonline.com/" target="_blank" rel="noopener noreferrer">Plataforma</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="">Modalidades<i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="Ciencias.html">Ciencias Naturales</a></li>
+                    <li><a href="Humanidades.html">Humanidades</a></li>
+                    <li><a href="Financiera.html">Adm. Financiera</a></li>
+                    <li><a href="Sistemas.html">Sistemas</a></li>
+                    <li><a href="Deportes.html">Deportes</a></li>
+                    <li><a href="Construcciones.html">Construcciones</a></li>
+                    <li><a href="Metal.html">Metal-Mecánica</a></li>
+                    <li><a href="Maderas.html">Maderas</a></li>
+                </ul>
+            </li>
+            <li><a href="contactenos.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección principal -->
+    <main class="container">
+
+    <h2 style="text-align: center; color:#0a2a66">Nuestras Sedes</h2>
+    <br>
+    <p style="text-align: center;">La institución educativa Inem Manuel Murillo Toro cuenta con tres sedes ubicadas en diferentes áreas de la 
+        ciudad en donde se imparte educación primaria, el radio de influencia de estas sedes beneficia a niños de 
+        los sectores aledaños a las mismas.</p>
+
+    <section class="gallery-container">
+    <div class="gallery-grid">
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/entrada-reja.jpg" alt="Sede Principal">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Sede Principal</h3>
+                    <p>Cll 22 #9-02 Interlaken</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/acacias.jpg" alt="Sede Acacias">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Sede Acacias</h3>
+                    <p>Calle 24 #4-53</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/ancon.jpg" alt="Sede Ancón">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Sede Ancón</h3>
+                    <p>Calle 17 #10-100 Barrio Ancón</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/cristales.jpg" alt="Sede Cristales">
+                </div>
+                <div class="flip-card-back">
+                    <h3>Sede Cristales</h3>
+                    <p>Vía Calambeo</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>© 2026 Institución Educativa INEM Ibagué</p>
+    </footer>
+
+</body>
+</html>

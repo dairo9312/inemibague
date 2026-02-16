@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Institución Educativa INEM Ibagué</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Enlace al CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Banner -->
+    <header class="banner-history" style="background: linear-gradient(rgba(10, 42, 102, 0.2), rgba(10, 42, 102, 0.2)), 
+                        url(img/Banner.jpg);background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            color: white;
+            border-bottom: 5px solid #0d6efd;
+            clip-path: ellipse(150% 100% at 50% 0%); /* Curva inferior */;">
+    <div class="banner-inner">
+        <div class="logo">
+            <img src="img/logo-inem.png" alt="Logo INEM Ibagué">
+        </div>
+
+        <div class="banner-content">
+            <h1>Institución Educativa Técnica INEM Manuel Murillo Toro</h1>
+            <p>“Formamos personas emprendedoras para una vida digna, el trabajo creativo y la educación Superior”</p>
+        </div>
+    </div>
+</header>
+
+    <nav class="menu">
+        <ul class="menu-list">
+            <li><a href="#" class="active">Inicio</a></li>
+            <li class="dropdown">
+                <a href="">Institución <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="history.html">Nuestra Historia</a></li>
+                    <li><a href="mision-vision.html">Misión y Visión</a></li>
+                    <li><a href="sedes.html">Sedes</a></li>
+                    <li><a href="equipo.html">Nuestro Equipo</a></li>
+                    <li><a href="mapa.html">Mapa Institucional</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" >Académico <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="https://colegiosonline.com/secure/matricula/?ie=inem" target="_blank" rel="noopener noreferrer">Matrículas</a></li>
+                    <li><a href="https://inem.colegiosonline.com/" target="_blank" rel="noopener noreferrer">Plataforma</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="">Modalidades<i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="Ciencias.html">Ciencias Naturales</a></li>
+                    <li><a href="Humanidades.html">Humanidades</a></li>
+                    <li><a href="Financiera.html">Adm. Financiera</a></li>
+                    <li><a href="Sistemas.html">Sistemas</a></li>
+                    <li><a href="Deportes.html">Deportes</a></li>
+                    <li><a href="Construcciones.html">Construcciones</a></li>
+                    <li><a href="Metal.html">Metal-Mecánica</a></li>
+                    <li><a href="Maderas.html">Maderas</a></li>
+                </ul>
+            </li>
+            <li><a href="contactenos.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección principal -->
+    <main class="container">
+
+        <!-- Video -->
+        <div class="modality-header-group">
+            <div class="header-text">
+                <h1 class="main-title">Nuestra Institución </h1>
+                
+                <br>
+            </div>
+
+            <div class="slider-container">
+                <div class="slide fade active"><img src="img/entrada.jpg" alt="Imagen 1"></div>
+                <div class="slide fade"><img src="img/coliseo.jpg" alt="Imagen 2"></div>
+                <div class="slide fade"><img src="img/estatua.jpg" alt="Imagen 3"></div>
+                <div class="slide fade"><img src="img/colegio.jpg" alt="Imagen 4"></div>
+                <div class="slide fade"><img src="img/dia del idioma 2.jpg" alt="Imagen 5"></div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <!-- Información institucional -->
+        <section class="info-section">
+            <h2>Información de Contacto</h2>
+            
+            <div class="info-item">
+                <strong>Dirección:</strong>
+                <span>Cll 22 #9-02 Interlaken</span>
+            </div>
+
+            <div class="info-item">
+                <strong>Teléfonos:</strong>
+                <span>2623017</span>
+            </div>
+
+            <div class="info-item">
+                <strong>Horario Atención:</strong>
+                <span>Lunes a Jueves de 7:00 AM a 11:30 AM y 2:00 PM a 5:00 PM</span>
+            </div>
+
+            <div class="info-item">
+                <strong>Resolución:</strong> 002001 del 25 de Julio de 2017</p>
+            </div>
+            <div class="info-item">
+                <strong>E-mail:</strong> ieinemibague@hotmail.com</p>
+            </div>
+
+        </section>
+
+        <!-- Mapa -->
+        <section class="map-section">
+            <h2>Ubicación</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.812978694779!2d-75.23194682534233!3d4.445875443814641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38c48c3f8d5efd%3A0xc11aee38ba601bc9!2sInstituci%C3%B3n%20Educativa%20INEM%20Manuel%20Murillo%20Toro!5e0!3m2!1ses-419!2sco!4v1770779168781!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+                </iframe>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>© 2026 Institución Educativa INEM Ibagué</p>
+    </footer>
+    <script src="slider.js"></script>
+
+</body>
+</html>

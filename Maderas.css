@@ -1,0 +1,287 @@
+/* --- Globales --- */
+:root {
+    --azul-inem: #b29475; /* Cambiado a verde según tu código base */
+    --amarillo-inem: #ffc107;
+    --verde-inem: #b29475;
+    --azul-institucional: #4b3621; /* Color para botones y fondos oscuros */
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+.container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* --- Ajuste Global de Secciones --- */
+section {
+    padding: 25px 0 !important;
+    margin: 0 !important;
+}
+
+/* --- Títulos Superiores --- */
+.modality-intro {
+    text-align: center;
+    padding-top: 20px !important;
+    padding-bottom: 5px !important;
+}
+
+.subtitle-modalidad { 
+    text-align: center;
+    font-weight: 700;         /* Negrita marcada */
+        letter-spacing: 1.5px;    /* Espaciado entre letras para mejor legibilidad */
+        display: block;           /* Asegura que ocupe su propia línea arriba del título */
+        margin-top: 10px;       /* Espacio respecto al título que sigue */
+        font-family: 'Segoe UI', Roboto, sans-serif;
+        text-align: center;
+    color: var(--azul-inem); 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+}
+
+.main-title {
+    color: var(--azul-inem);
+    font-size: 2.8rem;
+    margin: 5px 0;
+    font-weight: 800;
+    text-align: center;
+}
+
+.main-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+    font-style: italic;
+}
+
+/* --- Slider --- */
+.slider-container {
+    position: relative;
+    max-width: 1000px;
+    height: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background-color: #eee;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide.active { display: block; }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 42, 102, 0.6);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+}
+
+.prev:hover, .next:hover { 
+    background: var(--amarillo-inem); 
+    color: var(--azul-institucional);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.next { right: 0; }
+.prev { left: 0; }
+
+/* --- Descripción --- */
+.modality-info { 
+    text-align: center; 
+    background: #fdfdfd; 
+    padding-top: 20px !important;
+}
+
+.modality-info h2 { color: var(--azul-inem); font-size: 2rem; margin-bottom: 15px; }
+.modality-info p { font-size: 1.05rem; max-width: 850px; margin: 0 auto; color: #555; }
+
+/* --- Objetivos --- */
+.modality-objectives { background: #f4f7fb; }
+.section-title { text-align: center; color: var(--azul-inem); margin-bottom: 30px; }
+.objectives-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+.obj-card {
+    background: white; 
+    padding: 25px; 
+    border-radius: 15px; 
+    text-align: center;
+    border-bottom: 5px solid var(--azul-institucional);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+.obj-card:hover { transform: translateY(-8px); }
+.obj-card i { font-size: 2.2rem; color: var(--azul-inem); margin-bottom: 15px; }
+.obj-card h3 { color: var(--azul-inem); font-size: 1.3rem; margin-bottom: 10px; }
+
+/* --- PERFIL OCUPACIONAL (AJUSTADO 50/50) --- */
+.profile-box { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 20px; 
+    
+    /* 1. Color de fondo (Madera Natural) */
+    background-color: #b29475; 
+    
+    /* 2. Patrón de Vetas y Anillos Orgánicos (SVG) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.5' stroke-opacity='0.15'%3E%3Cpath d='M0 20 Q25 10 50 20 T100 20 M0 40 Q25 30 50 40 T100 40 M0 60 Q25 50 50 60 T100 60 M0 80 Q25 70 50 80 T100 80'/%3E%3Cellipse cx='50' cy='50' rx='10' ry='15' stroke-opacity='0.1'/%3E%3Cellipse cx='50' cy='50' rx='20' ry='30' stroke-opacity='0.05'/%3E%3C/g%3E%3C/svg%3E");
+    
+    background-size: 250px 250px;
+    background-blend-mode: soft-light; 
+    
+    color: white; 
+    border-radius: 15px; /* Bordes un poco más rectos para simular cortes de carpintería */
+    padding: 50px;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+    
+    /* Sombra de relieve de madera tallada */
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.1), 0 10px 25px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* --- 1. EFECTO DE BARNIZADO (Reflejo satinado móvil) --- */
+.profile-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.05),
+        transparent
+    );
+    transform: skewX(-15deg);
+    transition: 0.8s;
+}
+
+/* --- 2. HOVER: REACCIÓN DE MATERIAL PULIDO --- */
+.profile-box:hover {
+    transform: translateY(-5px) scale(1.01);
+    background-color: #a08365; /* Color más rico y profundo como madera tratada */
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.05), 0 20px 40px rgba(0,0,0,0.25);
+}
+
+.profile-box:hover::before {
+    left: 150%; /* El reflejo satinado cruza la veta */
+}
+
+/* --- 3. ANIMACIÓN DE LAS VETAS (Profundidad orgánica) --- */
+@keyframes woodTexture {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 10% 5%; }
+}
+
+.profile-box:hover {
+    animation: woodTexture 5s ease-in-out infinite alternate;
+}
+
+/* Detalle: Textura de grano fino */
+.profile-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03; /* Apenas perceptible, simula el poro de la madera */
+    pointer-events: none;
+}
+
+/* Ajuste de Texto */
+.profile-text h2 {
+    font-weight: 800;
+    color: #4b3621; /* Marrón chocolate para contraste natural */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0px rgba(255,255,255,0.2);
+}
+
+
+.profile-text li i {
+    color: #2d4f1e; /* Verde Bosque (Contraste 3) para un look natural */
+    font-size: 1.2rem;
+}
+
+.profile-text { 
+    flex: 1; /* Ocupa la mitad izquierda */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el bloque de texto en su mitad */
+    text-align: center;
+}
+
+.profile-text h2 { color: var(--azul-institucional); font-size: 2.2rem; margin-bottom: 15px; }
+
+.profile-text ul { list-style: none; padding: 0; text-align: left; }
+
+.profile-text li { 
+    margin-bottom: 12px; 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    font-size: 1.1rem;
+}
+
+.profile-text li i { color: var(--azul-institucional); }
+
+.profile-img { 
+    flex: 1; /* Ocupa la mitad derecha */
+    display: flex;
+    justify-content: center; /* Centra la imagen en su mitad */
+    align-items: center;
+}
+
+.profile-img img { 
+    width: 80%; /* Tamaño relativo a su mitad */
+    max-width: 200px;
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 15px;
+    border: 2px solid white; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .profile-box { flex-direction: column; padding: 25px; }
+    .profile-img { width: 100%; }
+    .profile-img img { width: 100%; }
+    .main-title { font-size: 2.2rem; }
+    .slider-container { height: 300px; }
+}

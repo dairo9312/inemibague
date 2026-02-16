@@ -1,0 +1,276 @@
+/* --- Globales --- */
+:root {
+    --azul-inem: #95a5a6; /* Cambiado a verde según tu código base */
+    --amarillo-inem: #ffc107;
+    --verde-inem: #95a5a6;
+    --azul-institucional: #2c3e50; /* Color para botones y fondos oscuros */
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+.container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* --- Ajuste Global de Secciones --- */
+section {
+    padding: 25px 0 !important;
+    margin: 0 !important;
+}
+
+/* --- Títulos Superiores --- */
+.modality-intro {
+    text-align: center;
+    padding-top: 20px !important;
+    padding-bottom: 5px !important;
+}
+
+.subtitle-modalidad { 
+    text-align: center;
+    font-weight: 700;         /* Negrita marcada */
+        letter-spacing: 1.5px;    /* Espaciado entre letras para mejor legibilidad */
+        display: block;           /* Asegura que ocupe su propia línea arriba del título */
+        margin-top: 10px;       /* Espacio respecto al título que sigue */
+        font-family: 'Segoe UI', Roboto, sans-serif;
+        text-align: center;
+    color: var(--azul-inem); 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+}
+
+.main-title {
+    color: var(--azul-inem);
+    font-size: 2.8rem;
+    margin: 5px 0;
+    font-weight: 800;
+    text-align: center;
+}
+
+.main-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+    font-style: italic;
+}
+
+/* --- Slider --- */
+.slider-container {
+    position: relative;
+    max-width: 1000px;
+    height: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background-color: #eee;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide.active { display: block; }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 42, 102, 0.6);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+}
+
+.prev:hover, .next:hover { 
+    background: var(--amarillo-inem); 
+    color: var(--azul-institucional);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.next { right: 0; }
+.prev { left: 0; }
+
+/* --- Descripción --- */
+.modality-info { 
+    text-align: center; 
+    background: #fdfdfd; 
+    padding-top: 20px !important;
+}
+
+.modality-info h2 { color: var(--azul-inem); font-size: 2rem; margin-bottom: 15px; }
+.modality-info p { font-size: 1.05rem; max-width: 850px; margin: 0 auto; color: #555; }
+
+/* --- Objetivos --- */
+.modality-objectives { background: #f4f7fb; }
+.section-title { text-align: center; color: var(--azul-inem); margin-bottom: 30px; }
+.objectives-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+.obj-card {
+    background: white; 
+    padding: 25px; 
+    border-radius: 15px; 
+    text-align: center;
+    border-bottom: 5px solid var(--azul-institucional);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+.obj-card:hover { transform: translateY(-8px); }
+.obj-card i { font-size: 2.2rem; color: var(--azul-inem); margin-bottom: 15px; }
+.obj-card h3 { color: var(--azul-inem); font-size: 1.3rem; margin-bottom: 10px; }
+
+/* --- PERFIL OCUPACIONAL (AJUSTADO 50/50) --- */
+.profile-box { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 20px; 
+    
+    /* 1. Color de fondo (Gris Cemento Estructural) */
+    background-color: #95a5a6; 
+    
+    /* 2. Patrón de Dibujo Técnico (Ajustado para mayor nitidez) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.2'%3E%3Cpath d='M10 10 L70 10 L70 70 L10 70 Z'/%3E%3Cpath d='M10 10 L70 70 M70 10 L10 70'/%3E%3Cpath d='M0 40 L80 40 M40 0 L40 80' stroke-dasharray='4,4'/%3E%3Crect x='45' y='45' width='20' height='20'/%3E%3C/g%3E%3C/svg%3E");
+    
+    background-size: 120px 120px;
+    background-blend-mode: overlay; 
+    
+    color: white; 
+    border-radius: 15px; /* Bordes menos redondeados para evocar bloques */
+    padding: 50px;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+    
+    /* Sombra pesada tipo concreto */
+    box-shadow: 8px 8px 0px #7f8c8d; 
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* --- 1. LÁSER DE NIVELACIÓN (Animación de precisión) --- */
+.profile-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 2px;
+    height: 100%;
+    background: rgba(231, 76, 60, 0.7); /* Rojo nivel láser */
+    box-shadow: 0 0 10px #e74c3c;
+    z-index: 1;
+    animation: laserScan 6s infinite ease-in-out;
+}
+
+/* --- 2. EFECTO DE CIMENTACIÓN (Hover) --- */
+.profile-box:hover {
+    transform: translate(-4px, -4px); /* Se levanta pero mantiene la base */
+    box-shadow: 12px 12px 0px #bdc3c7; /* La sombra se proyecta más */
+    background-color: #7f8c8d; /* Concreto más denso */
+}
+
+/* --- 3. DETALLE DE ESCALA MÉTRICA --- */
+.profile-box::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-image: linear-gradient(90deg, #ffffff 1px, transparent 1px);
+    background-size: 10px 100%; /* Simula los milímetros de una regla */
+    opacity: 0.3;
+}
+
+/* --- ANIMACIONES --- */
+@keyframes laserScan {
+    0% { left: 0%; opacity: 0; }
+    50% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+}
+
+/* Ajuste de Texto */
+.profile-text h2 {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+
+.profile-text li i {
+    color: #e74c3c; /* Rojo Obra (Opción de contraste) para los iconos de check */
+    font-size: 1.2rem;
+}
+
+.profile-text { 
+    flex: 1; /* Ocupa la mitad izquierda */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el bloque de texto en su mitad */
+    text-align: center;
+}
+
+.profile-text h2 { color: var(--azul-institucional); font-size: 2.2rem; margin-bottom: 15px; }
+
+.profile-text ul { list-style: none; padding: 0; text-align: left; }
+
+.profile-text li { 
+    margin-bottom: 12px; 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    font-size: 1.1rem;
+}
+
+.profile-text li i { color: var(--azul-institucional); }
+
+.profile-img { 
+    flex: 1; /* Ocupa la mitad derecha */
+    display: flex;
+    justify-content: center; /* Centra la imagen en su mitad */
+    align-items: center;
+}
+
+.profile-img img { 
+    width: 80%; /* Tamaño relativo a su mitad */
+    max-width: 200px;
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 15px;
+    border: 2px solid white; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .profile-box { flex-direction: column; padding: 25px; }
+    .profile-img { width: 100%; }
+    .profile-img img { width: 100%; }
+    .main-title { font-size: 2.2rem; }
+    .slider-container { height: 300px; }
+}

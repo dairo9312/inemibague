@@ -1,0 +1,116 @@
+/* --- SECCIÓN DE CONTACTO GENERAL --- */
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- TARJETA CONTENEDORA (Google Forms) --- */
+.form-card {
+    width: 100%;
+    max-width: 850px;
+    background: #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border: 1px solid rgba(10, 42, 102, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* --- ENCABEZADO DE LA TARJETA --- */
+.form-header {
+    background: #0a2a66; /* Azul INEM */
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+.icon-circle {
+    width: 65px;
+    height: 65px;
+    background: #28a745; /* Verde Institucional */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 26px;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+    color: white;
+}
+
+.form-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.form-header p {
+    margin-top: 10px;
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+/* --- CONTENEDOR DEL IFRAME --- */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilización de Scrollbar para navegadores modernos */
+.iframe-container::-webkit-scrollbar {
+    width: 8px;
+}
+.iframe-container::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 10px;
+}
+
+/* --- ESTILOS DE CARGA (Para integración futura o JS) --- */
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* --- RESPONSIVIDAD (Móviles) --- */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 15px;
+    }
+    
+    .form-card {
+        border-radius: 20px;
+    }
+    
+    .form-header {
+        padding: 30px 15px;
+    }
+    
+    .form-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .icon-circle {
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+    }
+}

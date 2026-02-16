@@ -1,0 +1,283 @@
+/* --- Globales --- */
+:root {
+    --azul-inem: #78c2ad; /* Cambiado a verde según tu código base */
+    --amarillo-inem: #ffc107;
+    --verde-inem: #78c2ad;
+    --azul-institucional: #2d3436; /* Color para botones y fondos oscuros */
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+.container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* --- Ajuste Global de Secciones --- */
+section {
+    padding: 25px 0 !important;
+    margin: 0 !important;
+}
+
+/* --- Títulos Superiores --- */
+.modality-intro {
+    text-align: center;
+    padding-top: 20px !important;
+    padding-bottom: 5px !important;
+}
+
+.subtitle-modalidad { 
+    text-align: center;
+    font-weight: 700;         /* Negrita marcada */
+        letter-spacing: 1.5px;    /* Espaciado entre letras para mejor legibilidad */
+        display: block;           /* Asegura que ocupe su propia línea arriba del título */
+        margin-top: 10px;       /* Espacio respecto al título que sigue */
+        font-family: 'Segoe UI', Roboto, sans-serif;
+        text-align: center;
+    color: var(--azul-inem); 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+}
+
+.main-title {
+    color: var(--azul-inem);
+    font-size: 2.8rem;
+    margin: 5px 0;
+    font-weight: 800;
+    text-align: center;
+}
+
+.main-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+    font-style: italic;
+}
+
+/* --- Slider --- */
+.slider-container {
+    position: relative;
+    max-width: 1000px;
+    height: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background-color: #eee;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide.active { display: block; }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 42, 102, 0.6);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+}
+
+.prev:hover, .next:hover { 
+    background: var(--amarillo-inem); 
+    color: var(--azul-institucional);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.next { right: 0; }
+.prev { left: 0; }
+
+/* --- Descripción --- */
+.modality-info { 
+    text-align: center; 
+    background: #fdfdfd; 
+    padding-top: 20px !important;
+}
+
+.modality-info h2 { color: var(--azul-inem); font-size: 2rem; margin-bottom: 15px; }
+.modality-info p { font-size: 1.05rem; max-width: 850px; margin: 0 auto; color: #555; }
+
+/* --- Objetivos --- */
+.modality-objectives { background: #f4f7fb; }
+.section-title { text-align: center; color: var(--azul-inem); margin-bottom: 30px; }
+.objectives-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+.obj-card {
+    background: white; 
+    padding: 25px; 
+    border-radius: 15px; 
+    text-align: center;
+    border-bottom: 5px solid var(--azul-institucional);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+.obj-card:hover { transform: translateY(-8px); }
+.obj-card i { font-size: 2.2rem; color: var(--azul-inem); margin-bottom: 15px; }
+.obj-card h3 { color: var(--azul-inem); font-size: 1.3rem; margin-bottom: 10px; }
+
+/* --- PERFIL OCUPACIONAL (AJUSTADO 50/50) --- */
+.profile-box { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 20px; 
+    
+    /* 1. Color de fondo (Verde Menta Institucional) */
+    background-color: #78c2ad; 
+    
+    /* 2. Patrón de Gráficas y Datos (SVG) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1.5' stroke-opacity='0.2'%3E%3Cpath d='M10 80 L30 60 L50 70 L80 30 L95 40'/%3E%3Crect x='10' y='85' width='10' height='5' rx='1'/%3E%3Crect x='30' y='85' width='10' height='10' rx='1'/%3E%3Crect x='50' y='85' width='10' height='15' rx='1'/%3E%3Ccircle cx='80' cy='30' r='3'/%3E%3Cpath d='M0 0 L100 0 M0 100 L100 100' stroke-dasharray='5,5'/%3E%3C/g%3E%3C/svg%3E");
+    
+    /* 3. Ajustes del fondo */
+    background-size: 160px 160px;
+    background-blend-mode: soft-light; 
+    
+    color: white; 
+    border-radius: 20px; 
+    padding: 50px;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(120, 194, 173, 0.3);
+    
+    /* --- DINAMISMO ADICIONAL --- */
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation: trendFlow 40s linear infinite; /* Movimiento constante de las gráficas */
+}
+
+/* --- 1. EFECTO DE "MONITOREO EN TIEMPO REAL" (Luz de escaneo horizontal) --- */
+.profile-box::before {
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.15),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.7s;
+}
+
+.profile-box:hover::before {
+    left: 150%; /* La luz cruza la tarjeta indicando un "balance positivo" */
+}
+
+/* --- 2. HOVER: EFECTO DE CRECIMIENTO --- */
+.profile-box:hover {
+    transform: translateY(-5px);
+    background-color: #69b39e; /* Un tono más sólido de confianza financiera */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* --- 3. ANIMACIÓN DE TENDENCIAS (Movimiento del patrón) --- */
+@keyframes trendFlow {
+    from { background-position: 0 0; }
+    to { background-position: 320px 0; } /* El patrón de gráficas se mueve hacia la derecha */
+}
+
+/* Detalle visual de moneda o símbolo de valor */
+.profile-box::after {
+    content: "$";
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    font-size: 12rem;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+}
+
+/* Ajuste del texto para Financiera */
+.profile-text h2 {
+    color: #ffffff; 
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-text li i {
+    color: #192a56; /* Azul Marino (Opción 3 de contraste) para dar peso y seriedad */
+}
+
+.profile-text { 
+    flex: 1; /* Ocupa la mitad izquierda */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el bloque de texto en su mitad */
+    text-align: center;
+}
+
+.profile-text h2 { color: var(--azul-institucional); font-size: 2.2rem; margin-bottom: 15px; }
+
+.profile-text ul { list-style: none; padding: 0; text-align: left; }
+
+.profile-text li { 
+    margin-bottom: 12px; 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    font-size: 1.1rem;
+}
+
+.profile-text li i { color: var(--azul-institucional); }
+
+.profile-img { 
+    flex: 1; /* Ocupa la mitad derecha */
+    display: flex;
+    justify-content: center; /* Centra la imagen en su mitad */
+    align-items: center;
+}
+
+.profile-img img { 
+    width: 80%; /* Tamaño relativo a su mitad */
+    max-width: 200px;
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 15px;
+    border: 2px solid white; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .profile-box { flex-direction: column; padding: 25px; }
+    .profile-img { width: 100%; }
+    .profile-img img { width: 100%; }
+    .main-title { font-size: 2.2rem; }
+    .slider-container { height: 300px; }
+}

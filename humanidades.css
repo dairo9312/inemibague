@@ -1,0 +1,280 @@
+/* --- Globales --- */
+:root {
+    --azul-inem: #a29bfe; /* Cambiado a verde según tu código base */
+    --amarillo-inem: #ffc107;
+    --verde-inem: #a29bfe;
+    --azul-institucional: #4834d4; /* Color para botones y fondos oscuros */
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+.container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* --- Ajuste Global de Secciones --- */
+section {
+    padding: 25px 0 !important;
+    margin: 0 !important;
+}
+
+/* --- Títulos Superiores --- */
+.modality-intro {
+    text-align: center;
+    padding-top: 20px !important;
+    padding-bottom: 5px !important;
+}
+
+.subtitle-modalidad { 
+    text-align: center;
+    font-weight: 700;         /* Negrita marcada */
+        letter-spacing: 1.5px;    /* Espaciado entre letras para mejor legibilidad */
+        display: block;           /* Asegura que ocupe su propia línea arriba del título */
+        margin-top: 10px;       /* Espacio respecto al título que sigue */
+        font-family: 'Segoe UI', Roboto, sans-serif;
+        text-align: center;
+    color: var(--azul-inem); 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+}
+
+.main-title {
+    color: var(--azul-inem);
+    font-size: 2.8rem;
+    margin: 5px 0;
+    font-weight: 800;
+    text-align: center;
+}
+
+.main-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+    font-style: italic;
+}
+
+/* --- Slider --- */
+.slider-container {
+    position: relative;
+    max-width: 1000px;
+    height: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background-color: #eee;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide.active { display: block; }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 42, 102, 0.6);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+}
+
+.prev:hover, .next:hover { 
+    background: var(--amarillo-inem); 
+    color: var(--azul-institucional);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.next { right: 0; }
+.prev { left: 0; }
+
+/* --- Descripción --- */
+.modality-info { 
+    text-align: center; 
+    background: #fdfdfd; 
+    padding-top: 20px !important;
+}
+
+.modality-info h2 { color: var(--azul-inem); font-size: 2rem; margin-bottom: 15px; }
+.modality-info p { font-size: 1.05rem; max-width: 850px; margin: 0 auto; color: #555; }
+
+/* --- Objetivos --- */
+.modality-objectives { background: #f4f7fb; }
+.section-title { text-align: center; color: var(--azul-inem); margin-bottom: 30px; }
+.objectives-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+.obj-card {
+    background: white; 
+    padding: 25px; 
+    border-radius: 15px; 
+    text-align: center;
+    border-bottom: 5px solid var(--azul-institucional);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+.obj-card:hover { transform: translateY(-8px); }
+.obj-card i { font-size: 2.2rem; color: var(--azul-inem); margin-bottom: 15px; }
+.obj-card h3 { color: var(--azul-inem); font-size: 1.3rem; margin-bottom: 10px; }
+
+/* --- PERFIL OCUPACIONAL (AJUSTADO 50/50) --- */
+.profile-box { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 20px; 
+    
+    /* 1. Color de fondo (Lila Lavanda base) */
+    background-color: #a29bfe; 
+    
+    /* 2. Patrón de Iconografía (Ajustado para mayor suavidad) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1' stroke-opacity='0.2'%3E%3Cpath d='M10 20 h20 v30 h-20 z M15 25 h10 M15 30 h10 M15 35 h10'/%3E%3Cpath d='M50 50 l10 -10 l5 5 l-10 10 z'/%3E%3Cpath d='M60 10 q10 0 10 10 t-10 10 t10 10 t-10 10'/%3E%3C/g%3E%3C/svg%3E");
+    
+    background-size: 140px 140px;
+    background-blend-mode: overlay;
+    
+    color: white; 
+    border-radius: 30px; /* Bordes un poco más suaves */
+    padding: 50px;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+
+    /* Sombra elegante */
+    box-shadow: 0 15px 35px rgba(162, 155, 254, 0.3);
+    transition: all 0.5s ease;
+}
+
+/* --- 1. EFECTO DE LUZ DE INSPIRACIÓN (Reflejo suave) --- */
+.profile-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.8s;
+}
+
+/* Al pasar el mouse, el reflejo cruza la tarjeta como una idea brillante */
+.profile-box:hover::before {
+    left: 150%;
+}
+
+/* --- 2. DINAMISMO EN EL FONDO (Movimiento de pluma) --- */
+.profile-box:hover {
+    transform: translateY(-8px);
+    background-color: #9088f1; /* Se oscurece ligeramente */
+    background-position: center 20px; /* El patrón se mueve sutilmente */
+}
+
+/* --- 3. ELEMENTO FLOTANTE: El cálamo o la pluma --- */
+.profile-box::after {
+    content: "✎"; /* Icono de pluma/lápiz */
+    position: absolute;
+    bottom: -10px;
+    right: 20px;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.1);
+    transform: rotate(-15deg);
+    transition: 0.5s ease;
+    pointer-events: none;
+}
+
+.profile-box:hover::after {
+    transform: rotate(0deg) scale(1.1);
+    color: rgba(255, 255, 255, 0.15);
+}
+
+/* Detalles de los textos */
+.profile-text h2 {
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-text li i {
+    color: #f9ca24; /* Amarillo para resaltar los checks */
+}
+
+.profile-text { 
+    flex: 1; /* Ocupa la mitad izquierda */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el bloque de texto en su mitad */
+    text-align: center;
+}
+
+.profile-text h2 { color: var(--azul-institucional); font-size: 2.2rem; margin-bottom: 15px; }
+
+.profile-text ul { list-style: none; padding: 0; text-align: left; }
+
+.profile-text li { 
+    margin-bottom: 12px; 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    font-size: 1.1rem;
+}
+
+.profile-text li i { color: var(--azul-institucional); }
+
+.profile-img { 
+    flex: 1; /* Ocupa la mitad derecha */
+    display: flex;
+    justify-content: center; /* Centra la imagen en su mitad */
+    align-items: center;
+}
+
+.profile-img img { 
+    width: 80%; /* Tamaño relativo a su mitad */
+    max-width: 200px;
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 15px;
+    border: 2px solid white; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .profile-box { flex-direction: column; padding: 25px; }
+    .profile-img { width: 100%; }
+    .profile-img img { width: 100%; }
+    .main-title { font-size: 2.2rem; }
+    .slider-container { height: 300px; }
+}

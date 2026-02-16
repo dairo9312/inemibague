@@ -1,0 +1,286 @@
+/* --- Globales --- */
+:root {
+    --azul-inem: #e67e22; /* Cambiado a verde según tu código base */
+    --amarillo-inem: #ffc107;
+    --verde-inem: #e67e22;
+    --azul-institucional: #1e3799; /* Color para botones y fondos oscuros */
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    margin: 0; 
+    color: #333; 
+    line-height: 1.6;
+}
+
+.container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+/* --- Ajuste Global de Secciones --- */
+section {
+    padding: 25px 0 !important;
+    margin: 0 !important;
+}
+
+/* --- Títulos Superiores --- */
+.modality-intro {
+    text-align: center;
+    padding-top: 20px !important;
+    padding-bottom: 5px !important;
+}
+
+.subtitle-modalidad { 
+    text-align: center;
+    font-weight: 700;         /* Negrita marcada */
+        letter-spacing: 1.5px;    /* Espaciado entre letras para mejor legibilidad */
+        display: block;           /* Asegura que ocupe su propia línea arriba del título */
+        margin-top: 10px;       /* Espacio respecto al título que sigue */
+        font-family: 'Segoe UI', Roboto, sans-serif;
+        text-align: center;
+    color: var(--azul-inem); 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px;
+    font-size: 1.1rem;
+}
+
+.main-title {
+    color: var(--azul-inem);
+    font-size: 2.8rem;
+    margin: 5px 0;
+    font-weight: 800;
+    text-align: center;
+}
+
+.main-subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+    font-style: italic;
+}
+
+/* --- Slider --- */
+.slider-container {
+    position: relative;
+    max-width: 1000px;
+    height: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background-color: #eee;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide.active { display: block; }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 42, 102, 0.6);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+}
+
+.prev:hover, .next:hover { 
+    background: var(--amarillo-inem); 
+    color: var(--azul-institucional);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.next { right: 0; }
+.prev { left: 0; }
+
+/* --- Descripción --- */
+.modality-info { 
+    text-align: center; 
+    background: #fdfdfd; 
+    padding-top: 20px !important;
+}
+
+.modality-info h2 { color: var(--azul-inem); font-size: 2rem; margin-bottom: 15px; }
+.modality-info p { font-size: 1.05rem; max-width: 850px; margin: 0 auto; color: #555; }
+
+/* --- Objetivos --- */
+.modality-objectives { background: #f4f7fb; }
+.section-title { text-align: center; color: var(--azul-inem); margin-bottom: 30px; }
+.objectives-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+.obj-card {
+    background: white; 
+    padding: 25px; 
+    border-radius: 15px; 
+    text-align: center;
+    border-bottom: 5px solid var(--azul-institucional);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+.obj-card:hover { transform: translateY(-8px); }
+.obj-card i { font-size: 2.2rem; color: var(--azul-inem); margin-bottom: 15px; }
+.obj-card h3 { color: var(--azul-inem); font-size: 1.3rem; margin-bottom: 10px; }
+
+/* --- PERFIL OCUPACIONAL (AJUSTADO 50/50) --- */
+.profile-box { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 20px; 
+    
+    /* 1. Color de fondo (Naranja dinámico) */
+    background-color: #e67e22; 
+    
+    /* 2. Patrón de Velocidad (Líneas diagonales dinámicas) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg stroke='%23ffffff' stroke-width='2' stroke-opacity='0.2' fill='none'%3E%3Cpath d='M0 80 L80 0 M-40 40 L40 -40 M40 120 L120 40'/%3E%3C/g%3E%3C/svg%3E");
+    
+    background-size: 100px 100px;
+    background-blend-mode: overlay;
+    
+    color: white; 
+    border-radius: 20px; 
+    padding: 50px;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+    
+    /* Transición rápida para reflejar agilidad deportiva */
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(230, 126, 34, 0.3);
+    
+    /* Animación constante de "viento" en el fondo */
+    animation: speedBackground 20s linear infinite;
+}
+
+/* --- 1. EFECTO DE ESTELA DE VELOCIDAD (Blur lateral) --- */
+.profile-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: 0.5s;
+    z-index: 1;
+}
+
+/* --- 2. HOVER: REACCIÓN EXPLOSIVA --- */
+.profile-box:hover {
+    transform: scale(1.03) skewX(-2deg); /* Inclinación de ataque/salida */
+    background-color: #d35400; /* Naranja más intenso de esfuerzo */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.profile-box:hover::before {
+    left: 100%; /* La estela de luz cruza velozmente */
+}
+
+/* --- 3. ANIMACIÓN DE FONDO (Desplazamiento de pista) --- */
+@keyframes speedBackground {
+    from { background-position: 0 0; }
+    to { background-position: 400px -400px; }
+}
+
+/* Detalle: Número de competencia o textura de malla deportiva */
+.profile-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255,255,255,0.1) 2px, transparent 2px);
+    background-size: 15px 15px; /* Simula la textura de una camiseta de básquet/fútbol */
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* Ajuste de Texto */
+.profile-text h2 {
+    font-weight: 900;
+    font-style: italic; /* Las itálicas siempre sugieren velocidad */
+    text-transform: uppercase;
+    letter-spacing: -1px; /* Típico de marcas deportivas */
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+}
+
+.profile-text li i {
+    color: #1e3799; /* Azul Noche (Opción 3 de contraste) para los iconos */
+}
+
+.profile-text { 
+    flex: 1; /* Ocupa la mitad izquierda */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el bloque de texto en su mitad */
+    text-align: center;
+}
+
+.profile-text h2 { color: var(--azul-institucional); font-size: 2.2rem; margin-bottom: 15px; }
+
+.profile-text ul { list-style: none; padding: 0; text-align: left; }
+
+.profile-text li { 
+    margin-bottom: 12px; 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    font-size: 1.1rem;
+}
+
+.profile-text li i { color: var(--azul-institucional); }
+
+.profile-img { 
+    flex: 1; /* Ocupa la mitad derecha */
+    display: flex;
+    justify-content: center; /* Centra la imagen en su mitad */
+    align-items: center;
+}
+
+.profile-img img { 
+    width: 80%; /* Tamaño relativo a su mitad */
+    max-width: 200px;
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 15px;
+    border: 2px solid white; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .profile-box { flex-direction: column; padding: 25px; }
+    .profile-img { width: 100%; }
+    .profile-img img { width: 100%; }
+    .main-title { font-size: 2.2rem; }
+    .slider-container { height: 300px; }
+}

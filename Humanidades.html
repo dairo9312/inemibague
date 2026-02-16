@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Humanidades - INEM Ibagué</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="humanidades.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Banner -->
+    <header class="banner-history" style="background: linear-gradient(rgba(10, 42, 102, 0.2), rgba(10, 42, 102, 0.2)), 
+                        url(img/Banner.jpg);background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            color: white;
+            border-bottom: 5px solid #0d6efd;
+            clip-path: ellipse(150% 100% at 50% 0%); /* Curva inferior */;">
+    <div class="banner-inner">
+        <div class="logo">
+            <img src="img/logo-inem.png" alt="Logo INEM Ibagué">
+        </div>
+
+        <div class="banner-content">
+            <h1>Institución Educativa Técnica INEM Manuel Murillo Toro</h1>
+            <p>“Formamos personas emprendedoras para una vida digna, el trabajo creativo y la educación Superior”</p>
+        </div>
+    </div>
+</header>
+
+    <nav class="menu">
+        <ul class="menu-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#">Institución <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="history.html">Nuestra Historia</a></li>
+                    <li><a href="mision-vision.html">Misión y Visión</a></li>
+                    <li><a href="sedes.html">Sedes</a></li>
+                    <li><a href="equipo.html">Nuestro Equipo</a></li>
+                    <li><a href="mapa.html">Mapa Institucional</a></li>
+
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" >Académico <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="https://colegiosonline.com/secure/matricula/?ie=inem" target="_blank" rel="noopener noreferrer">Matrículas</a></li>
+                    <li><a href="https://inem.colegiosonline.com/" target="_blank" rel="noopener noreferrer">Plataforma</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="" class="active">Modalidades<i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="Ciencias.html">Ciencias Naturales</a></li>
+                    <li><a href="Humanidades.html" class="active">Humanidades</a></li>
+                    <li><a href="Financiera.html">Adm. Financiera</a></li>
+                    <li><a href="Sistemas.html">Sistemas</a></li>
+                    <li><a href="Deportes.html">Deportes</a></li>
+                    <li><a href="Construcciones.html">Construcciones</a></li>
+                    <li><a href="Metal.html">Metal-Mecánica</a></li>
+                    <li><a href="Maderas.html">Maderas</a></li>
+                </ul>
+            </li>
+            <li><a href="contactenos.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <div class="modality-header-group">
+            <div class="header-text">
+                <span class="subtitle-modalidad">MODALIDAD</span>
+                <h1 class="main-title">HUMANIDADES</h1>
+                <p class="main-subtitle">Explorando el mundo a través del método científico</p>
+                <br>
+            </div>
+
+            <div class="slider-container">
+                <div class="slide fade active"><img src="img/Sistemas/sistemas 3.HEIC" alt="Imagen 1"></div>
+                <div class="slide fade"><img src="img/Sistemas/sistemas 4.HEIC" alt="Imagen 2"></div>
+                <div class="slide fade"><img src="img/Sistemas/sistemas 5.HEIC" alt="Imagen 3"></div>
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <section class="modality-info">
+            <div class="container">
+                <h2>Descripción de la Modalidad</h2>
+                <p>La modalidad de Ciencias Naturales se enfoca en el desarrollo del pensamiento crítico y la curiosidad científica...</p>
+            </div>
+        </section>
+
+        <section class="modality-objectives">
+            <div class="container">
+                <h2 class="section-title">Objetivos de Formación</h2>
+                <div class="objectives-grid">
+                    <div class="obj-card"><i class="fas fa-microscope"></i><h3>Investigación</h3><p>Uso del método científico.</p></div>
+                    <div class="obj-card"><i class="fas fa-leaf"></i><h3>Conciencia Ambiental</h3><p>Sostenibilidad y respeto.</p></div>
+                    <div class="obj-card"><i class="fas fa-flask"></i><h3>Práctica Experimental</h3><p>Habilidades en laboratorio.</p></div>
+                    <div class="obj-card"><i class="fas fa-brain"></i><h3>Pensamiento Crítico</h3><p>Análisis de datos riguroso.</p></div>
+                    <div class="obj-card"><i class="fas fa-vial"></i><h3>Ciencia Aplicada</h3><p>Casos de la vida cotidiana.</p></div>
+                    <div class="obj-card"><i class="fas fa-graduation-cap"></i><h3>Base Académica</h3><p>Éxito en educación superior.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="occupational-profile">
+            <div class="container profile-box">
+                <div class="profile-text">
+                    <h2>Perfil Ocupacional</h2>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Auxiliar en laboratorios.</li>
+                        <li><i class="fas fa-check-circle"></i> Gestor ambiental.</li>
+                        <li><i class="fas fa-check-circle"></i> Promotor de salud.</li>
+                        <li><i class="fas fa-check-circle"></i> Apoyo técnico ambiental.</li>
+                    </ul>
+                </div>
+                <div class="profile-img">
+                    <img src="img/Ardillas/ardilla humanidades.jpeg" alt="Perfil">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>© 2026 Institución Educativa INEM Ibagué</p>
+    </footer>
+
+    <script src="slider.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuestra Historia - Institución Educativa INEM Ibagué</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Enlace al CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<style>
+    .toast-message {
+        position: fixed;
+        bottom: 30px;
+        right: -400px; /* Oculto inicialmente */
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        border-left: 6px solid #28a745;
+        z-index: 10000;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        width: 350px;
+        overflow: hidden;
+    }
+
+    .toast-message.active {
+        right: 30px;
+    }
+
+    .toast-content {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .toast-content i {
+        color: #28a745;
+        font-size: 2rem;
+    }
+
+    .toast-text h3 {
+        margin: 0;
+        color: #0a2a66;
+        font-size: 1.1rem;
+    }
+
+    .toast-text p {
+        margin: 5px 0 0;
+        color: #666;
+        font-size: 0.85rem;
+    }
+
+    .close-toast {
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: #ccc;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .progress-bar {
+        height: 4px;
+        width: 100%;
+        background: #e1e8e5;
+        position: relative;
+    }
+
+    .progress-bar::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #28a745;
+        animation: progress 5s linear forwards;
+    }
+
+    @keyframes progress {
+        100% { width: 0%; }
+    }
+</style>
+<body>
+
+    <!-- Banner -->
+    <header class="banner-history" style="background: linear-gradient(rgba(10, 42, 102, 0.2), rgba(10, 42, 102, 0.2)), 
+                        url(img/Banner.jpg);background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            color: white;
+            border-bottom: 5px solid #0d6efd;
+            clip-path: ellipse(150% 100% at 50% 0%); /* Curva inferior */;">
+    <div class="banner-inner">
+        <div class="logo">
+            <img src="img/logo-inem.png" alt="Logo INEM Ibagué">
+        </div>
+
+        <div class="banner-content">
+            <h1>Institución Educativa Técnica INEM Manuel Murillo Toro</h1>
+            <p>“Formamos personas emprendedoras para una vida digna, el trabajo creativo y la educación Superior”</p>
+        </div>
+    </div>
+</header>
+
+    <nav class="menu">
+        <ul class="menu-list">
+            <li><a href="#" class="active">Inicio</a></li>
+            <li class="dropdown">
+                <a href="">Institución <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="history.html">Nuestra Historia</a></li>
+                    <li><a href="mision-vision.html">Misión y Visión</a></li>
+                    <li><a href="sedes.html">Sedes</a></li>
+                    <li><a href="equipo.html">Nuestro Equipo</a></li>
+                    <li><a href="mapa.html">Mapa Institucional</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" >Académico <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="https://colegiosonline.com/secure/matricula/?ie=inem" target="_blank" rel="noopener noreferrer">Matrículas</a></li>
+                    <li><a href="https://inem.colegiosonline.com/" target="_blank" rel="noopener noreferrer">Plataforma</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="">Modalidades<i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="Ciencias.html">Ciencias Naturales</a></li>
+                    <li><a href="Humanidades.html">Humanidades</a></li>
+                    <li><a href="Financiera.html">Adm. Financiera</a></li>
+                    <li><a href="Sistemas.html">Sistemas</a></li>
+                    <li><a href="Deportes.html">Deportes</a></li>
+                    <li><a href="Construcciones.html">Construcciones</a></li>
+                    <li><a href="Metal.html">Metal-Mecánica</a></li>
+                    <li><a href="Maderas.html">Maderas</a></li>
+                </ul>
+            </li>
+            <li><a href="contactenos.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección principal -->
+    <div id="success-toast" class="toast-message">
+    <div class="toast-content">
+        <i class="fas fa-check-circle"></i>
+        <div class="toast-text">
+            <h3>¡Mensaje Enviado!</h3>
+            <p>Gracias por contactar al INEM. Pronto te responderemos.</p>
+        </div>
+        <button onclick="closeToast()" class="close-toast">&times;</button>
+    </div>
+    <div class="progress-bar"></div>
+</div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>© 2026 Institución Educativa INEM Ibagué</p>
+    </footer>
+
+    <script>
+    window.onload = function() {
+        // Revisa si la URL tiene "?success=true"
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            const toast = document.getElementById('success-toast');
+            toast.classList.add('active');
+
+            // Se oculta automáticamente después de 5 segundos
+            setTimeout(() => {
+                closeToast();
+            }, 5000);
+
+            // Limpia la URL para que no aparezca el mensaje si el usuario refresca la página
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    }
+
+    function closeToast() {
+        const toast = document.getElementById('success-toast');
+        toast.classList.remove('active');
+    }
+</script>
+
+
+</body>
+</html>

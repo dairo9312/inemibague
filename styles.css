@@ -1,0 +1,672 @@
+/* --- Slider --- */
+.slider-container {
+    position: relative;
+    max-width: 1000px;
+    height: 450px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background-color: #eee;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slide.active { display: block; }
+.slide img { width: 100%; height: 100%; object-fit: cover; }
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 42, 102, 0.6);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+}
+
+.main-title {
+    color: #0b5ed7;
+    font-size: 2.8rem;
+    margin: 5px 0;
+    font-weight: 800;
+    text-align: center;
+}
+.prev:hover, .next:hover { 
+    background: var(--amarillo-inem); 
+    color: var(--azul-institucional);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.next { right: 0; }
+.prev { left: 0; }
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(135deg, #f4f7fb, #e1e8f0);
+    padding: 60px 20px;
+    color: #0a2a66;
+    border-bottom: 5px solid #0d6efd;
+}
+
+
+.banner-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+}
+
+.banner-history .banner-content h1 {
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .banner-history .banner-content p {
+            font-size: 1.1rem;
+            color: #e0e6ed;
+            font-style: italic;
+        }
+
+.banner-history .logo img {
+    width: 140px;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+    background: white;
+    padding: 10px;
+    border-radius: 50%; }
+
+.banner-history .banner-inner {
+    max-width: 1200px;
+
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .banner-inner {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo img {
+    width: 120px;
+    height: auto;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+}
+
+
+/* Contenedor principal */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Secciones */
+section {
+    margin-bottom: 50px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #0b5ed7;
+    text-align: center;
+}
+
+/* Video */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Información */
+.info-section {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+    line-height: 1.8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Mapa */
+.map-section iframe {
+    width: 100%;
+    height: 350px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #0b5ed7;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.social-icons {
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 15px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffc107;
+    transform: scale(1.2);
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+
+/* Menú de navegación */
+.menu {
+    background-color: #ffffff;
+    border-bottom: 2px solid #e0e6ed;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-list {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.menu-list li {
+    margin: 0;
+}
+
+.menu-list a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #0a2a66;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.menu-list a:hover {
+    background-color: #f4f7fb;
+    border-bottom: 3px solid #0d6efd;
+    color: #0d6efd;
+}
+
+/* Pestaña activa */
+.menu-list a.active {
+    border-bottom: 3px solid #0d6efd;
+    color: #0d6efd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu-list {
+        justify-content: space-around;
+    }
+
+    .menu-list a {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* --- Mejoras sobre tu código existente --- */
+
+/* Mejora la legibilidad del texto */
+body {
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Ajuste fino al Menú Sticky */
+.menu {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Efecto en la sección de información */
+.info-section p {
+    padding: 8px 0;
+    border-bottom: 1px dotted #dee2e6;
+}
+
+.info-section p:last-child {
+    border-bottom: none;
+}
+
+.info-section p strong {
+    color: #0b5ed7;
+    display: inline-block;
+    width: 140px; /* Alinea las etiquetas */
+}
+
+/* Corrección para que el mapa sea realmente responsivo */
+.map-section {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Animación suave para el menú */
+.menu-list a:active {
+    transform: translateY(2px);
+}
+
+
+.info-section {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.info-item {
+    display: flex; /* Activa el modo flexible */
+    align-items: center; /* ESTO centra el contenido de arriba a abajo */
+    padding: 15px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.info-item strong {
+    color: #0b5ed7;
+    min-width: 180px; /* Mantiene los títulos alineados a la izquierda */
+    font-size: 1.1rem;
+}
+
+.info-item span {
+    flex: 1; /* Hace que el texto ocupe el resto del espacio */
+    line-height: 1.4;
+}
+
+/* Ajuste para que en móviles no se rompa el diseño */
+@media (max-width: 600px) {
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start; /* En móvil es mejor alinearlos a la izquierda */
+    }
+    .info-item strong {
+        margin-bottom: 5px;
+    }
+}
+
+
+/* Posicionamiento del menú padre */
+.dropdown {
+    position: relative;
+}
+
+/* Estilo de la caja que contiene las opciones */
+.dropdown-content {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+    z-index: 1001;
+    border-radius: 0 0 8px 8px;
+    padding: 0;
+    list-style: none;
+    border-top: 3px solid #0d6efd;
+}
+
+/* Estilo de los enlaces dentro del desplegable */
+.dropdown-content li a {
+    color: #0a2a66;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: left;
+}
+
+.dropdown-content li:last-child a {
+    border-bottom: none;
+}
+
+/* Cambio de color al pasar el mouse por las opciones */
+.dropdown-content li a:hover {
+    background-color: #f4f7fb;
+    color: #0d6efd;
+}
+
+/* MOSTRAR EL MENÚ AL PASAR EL MOUSE */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Icono de flecha */
+.dropdown i {
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.banner-history .banner-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;         /* Activa el modo flexible */
+    flex-direction: row;   /* Coloca logo y texto en la misma línea */
+    align-items: center;   /* Centra el logo y el texto verticalmente entre sí */
+    justify-content: center; /* Centra todo el bloque en el medio del banner */
+    gap: 40px;             /* Espacio de separación entre el logo y el texto */
+    text-align: center;    /* Mantiene el texto centrado en su propio bloque */
+}
+
+.banner-content {
+    flex: 1;               /* Permite que el texto ocupe el espacio restante */
+    max-width: 800px;      /* Evita que el texto se estire demasiado */
+}
+
+.banner-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+/* Ajuste para móviles: se apilan si la pantalla es muy pequeña */
+@media (max-width: 768px) {
+    .banner-history .banner-inner {
+        flex-direction: column; 
+        gap: 20px;
+    }
+}
+
+
+.banner-history {
+            background: linear-gradient(rgba(10, 42, 102, 0.2), rgba(10, 42, 102, 0.2)), 
+                        url(img/Banner.jpg); 
+            /* Nota: Cambia la URL de arriba por la imagen real de tu institución */
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            color: white;
+            border-bottom: 5px solid #0d6efd;
+            clip-path: ellipse(150% 100% at 50% 0%); /* Curva inferior */
+        }
+
+
+        #mision-vision {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BLOQUE RAZÓN DE SER */
+.razon-ser {
+    padding: 80px 0;
+    background: #f4f6f8;
+}
+
+.contenedor {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texto {
+    width: 50%;
+}
+
+.subtitulo {
+    color: #2ecc71;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.texto p {
+    text-align: justify;
+}
+
+.texto h2 {
+    font-size: 42px;
+    color: #1e2a78;
+    margin: 10px 0 20px 0;
+}
+
+.texto p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* IMÁGENES SUPERPUESTAS */
+.imagenes {
+    position:sticky;
+    width: 40%;
+}
+
+.imagenes img {
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: absolute;
+}
+
+.img1 {
+    top: -150px;
+    left: 190px;
+}
+
+.img2 {
+    top: 60px;
+    left: 190px;
+}
+
+.img3 {
+    top: -50px;
+    left: 0px;
+}
+
+/* MISIÓN Y VISIÓN */
+.mision, .vision {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contenedor-centro {
+    width: 60%;
+    margin: auto;
+}
+
+.mision h2, .vision h2 {
+    font-size: 40px;
+    color: #1e2a78;
+    margin-bottom: 20px;
+}
+
+.icono {
+    width: 90px;
+    height: 90px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #1e2a78;
+}
+
+.mision {
+    background: #ffffff;
+}
+
+.vision {
+    background: #f4f6f8;
+}
+
+
+/* --- SECCIÓN VALORES --- */
+.values-section {
+    padding: 100px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.values-title {
+    color: #0a2a66;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+
+/* --- TARJETA INDIVIDUAL --- */
+.value-card {
+    position: relative;
+    padding-top: 50px;
+    /* Estado inicial para la animación */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* Clase que activa la animación (se añade vía JS) */
+.value-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.value-icon {
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: #0a2a66;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.value-content {
+    background-color:lightgray; /* Amarillo */
+    border-radius: 120px 120px 60px 60px; /* Forma de cápsula */
+    padding: 70px 30px 50px;
+    position: relative;
+    overflow: hidden;
+    height: 320px;
+}
+
+/* Parte superior azul (U invertida) */
+.value-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-color: #0a2a66; /* Azul */
+}
+
+.value-content h3 {
+    color: white;
+    position: relative;
+    z-index: 2;
+    margin-top: 5px;
+    font-size: 1.5rem;
+    margin-top: -10px;
+}
+
+.value-content p {
+    color: #0a2a66;
+    margin-top: 40px;
+    font-weight: 500;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+/* Efecto hover sutil */
+.value-card:hover .value-content {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+
+.subtitle-green {
+        color: #28a745;           /* Verde vibrante pero profesional */
+        font-weight: 700;         /* Negrita marcada */
+        letter-spacing: 1.5px;    /* Espaciado entre letras para mejor legibilidad */
+        display: block;           /* Asegura que ocupe su propia línea arriba del título */
+        margin-top: 5px;       /* Espacio respecto al título que sigue */
+        font-family: 'Segoe UI', Roboto, sans-serif;
+        text-align: center;
+    }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contactenos - Institución Educativa INEM Ibagué</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Enlace al CSS -->
+    <link rel="stylesheet" href="contactenos.css">
+
+    <!-- Iconos Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Banner -->
+    <header class="banner-history" style="background: linear-gradient(rgba(10, 42, 102, 0.2), rgba(10, 42, 102, 0.2)), 
+                        url(img/Banner.jpg);background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            color: white;
+            border-bottom: 5px solid #0d6efd;
+            clip-path: ellipse(150% 100% at 50% 0%); /* Curva inferior */;">
+    <div class="banner-inner">
+        <div class="logo">
+            <img src="img/logo-inem.png" alt="Logo INEM Ibagué">
+        </div>
+
+        <div class="banner-content">
+            <h1>Institución Educativa Técnica INEM Manuel Murillo Toro</h1>
+            <p>“Formamos personas emprendedoras para una vida digna, el trabajo creativo y la educación Superior”</p>
+        </div>
+    </div>
+</header>
+
+    <nav class="menu">
+        <ul class="menu-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="">Institución <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="history.html">Nuestra Historia</a></li>
+                    <li><a href="mision-vision.html">Misión y Visión</a></li>
+                    <li><a href="sedes.html">Sedes</a></li>
+                    <li><a href="equipo.html">Nuestro Equipo</a></li>
+                    <li><a href="mapa.html">Mapa Institucional</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" >Académico <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="https://colegiosonline.com/secure/matricula/?ie=inem" target="_blank" rel="noopener noreferrer">Matrículas</a></li>
+                    <li><a href="https://inem.colegiosonline.com/" target="_blank" rel="noopener noreferrer">Plataforma</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="">Modalidades<i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="Ciencias.html">Ciencias Naturales</a></li>
+                    <li><a href="Humanidades.html">Humanidades</a></li>
+                    <li><a href="Financiera.html">Adm. Financiera</a></li>
+                    <li><a href="Sistemas.html">Sistemas</a></li>
+                    <li><a href="Deportes.html">Deportes</a></li>
+                    <li><a href="Construcciones.html">Construcciones</a></li>
+                    <li><a href="Metal.html">Metal-Mecánica</a></li>
+                    <li><a href="Maderas.html">Maderas</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="active">Contacto</a></li>
+        </ul>
+    </nav>
+
+
+        <section class="contact-section">
+            <div class="contact-wrapper">
+                <div class="contact-header">
+                    <h1 style="color: #0a2a66;">Contacto Institucional</h1>
+                    <br>
+                    <p>Tus datos se alojarán de forma segura en nuestra base de datos institucional.</p>
+                </div>
+
+            <section class="contact-section">
+                    <div class="form-card">
+                        <div class="form-header">
+                            <div class="icon-circle">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                            <h1 style="color: azure;">Buzón de Contacto</h1>
+                            <p>Completa el formulario oficial para procesar tu solicitud</p>
+                        </div>
+                        
+                        <div class="iframe-container">
+                            <iframe 
+                                src="https://docs.google.com/forms/d/e/1FAIpQLSfw6Oq6esEDK_RIfldKNbJgn2hq_pHsGx8K4g8XZ45FhFn6-w/viewform?embedded=true" 
+                                width="720" 
+                                height="870" 
+                                frameborder="0" 
+                                marginheight="0" 
+                                marginwidth="0">
+                                Cargando…
+                            </iframe>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>© 2026 Institución Educativa INEM Ibagué</p>
+    </footer>
+
+
+    <script>
+    const form = document.querySelector('.modern-form');
+    const btnSubmit = document.getElementById('btn-submit');
+    const btnText = document.getElementById('btn-text');
+    const btnIcon = document.getElementById('btn-icon');
+    const loader = document.getElementById('loader');
+
+    form.onsubmit = function() {
+        // 1. Cambiar estado visual del botón
+        btnSubmit.classList.add('loading');
+        btnText.innerText = "Enviando...";
+        
+        // 2. Mostrar el spinner y ocultar el icono original
+        loader.style.display = "block";
+        btnIcon.style.display = "none";
+
+        // 3. Deshabilitar el botón
+        btnSubmit.disabled = true;
+
+        // Formspree tomará el control aquí, procesará el envío 
+        // y redirigirá a enviado.html?success=true
+    };
+</script>
+</body>
+</html>

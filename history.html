@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuestra Historia - Institución Educativa INEM Ibagué</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="history.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   
+</head>
+<body>
+
+    <header class="banner-history">
+    <div class="banner-inner">
+        <div class="logo">
+            <img src="img/logo-inem.png" alt="Logo INEM Ibagué">
+        </div>
+
+        <div class="banner-content">
+            <h1>Institución Educativa Técnica INEM Manuel Murillo Toro</h1>
+            <p>“Formamos personas emprendedoras para una vida digna, el trabajo creativo y la educación Superior”</p>
+        </div>
+    </div>
+</header>
+
+    <nav class="menu">
+        <ul class="menu-list">
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#" class="active">Institución <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="nosotros.html" class="active">Nuestra Historia</a></li>
+                    <li><a href="mision-vision.html">Misión y Visión</a></li>
+                    <li><a href="sedes.html">Sedes</a></li>
+                    <li><a href="equipo.html">Nuestro Equipo</a></li>
+                    <li><a href="mapa.html">Mapa Institucional</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" >Académico <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="https://colegiosonline.com/secure/matricula/?ie=inem" target="_blank" rel="noopener noreferrer">Matrículas</a></li>
+                    <li><a href="https://inem.colegiosonline.com/" target="_blank" rel="noopener noreferrer">Plataforma</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="">Modalidades<i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="Ciencias.html">Ciencias Naturales</a></li>
+                    <li><a href="Humanidades.html">Humanidades</a></li>
+                    <li><a href="Financiera.html">Adm. Financiera</a></li>
+                    <li><a href="Sistemas.html">Sistemas</a></li>
+                    <li><a href="Deportes.html">Deportes</a></li>
+                    <li><a href="Construcciones.html">Construcciones</a></li>
+                    <li><a href="Metal.html">Metal-Mecánica</a></li>
+                    <li><a href="Maderas.html">Maderas</a></li>
+                </ul>
+            </li>
+            <li><a href="contactenos.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section class="full-history-section">
+    <div class="history-grid-expanded">
+        
+        <div class="history-column-left">
+            <span class="subtitle-green">Un Legado de</span>
+            <h2 class="main-title">Nuestra Historia</h2>
+            <div class="text-content">
+                <p>
+                    La Institución Educativa Técnica INEM Manuel Murillo Toro de Ibagué ha sido, por décadas, 
+                    el faro del conocimiento técnico en la región del Tolima. Nuestra historia se escribe 
+                    con el esfuerzo de miles de estudiantes que han transformado la ciudad.
+                </p>
+                <p>
+                    Desde su creación, el INEM ha mantenido una visión de excelencia, adaptándose a los 
+                    tiempos modernos sin perder su compromiso con la formación integral y humana.
+                </p>
+            </div>
+        </div>
+
+        <div class="history-column-right">
+    <div class="highlight-card" id="history-card" style="transition: all 0.3s ease;">
+        <p id="card-text">
+            "La historia del INEM comienza con el sueño de ofrecer una educación que 
+            uniera el saber académico con el saber hacer, preparando a los jóvenes 
+            para los retos reales de la sociedad y la industria."
+        </p>
+        <div id="card-author" class="card-author">— Un Legado de Excelencia en Ibagué</div>
+    </div>
+
+    <div class="nav-wrapper">
+        <div class="nav-controls">
+            <button class="btn-nav" onclick="changeCard(-1)"><i class="fas fa-chevron-left"></i></button>
+            
+            <div class="book-circle">
+                <i id="card-icon" class="fas fa-book-open"></i>
+            </div>
+            
+            <button class="btn-nav" onclick="changeCard(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <p id="card-caption" class="footer-caption">El Comienzo de una Misión Global</p>
+    </div>
+</div>
+
+    </div>
+</section>
+
+    <section class="timeline-section">
+        <div class="timeline-intro">
+            <span class="subtitle-green">Momentos Clave en</span>
+            <h2 class="timeline-title">Nuestra Trayectoria</h2>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-line">
+                <div class="timeline-progress" id="progress-bar"></div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <p> Creación de la institución Educativa Técnica “INEM MANUEL MURILLO TORO “ de Ibagué (Decreto 1962 de 1969).
+                        </p>
+                </div>
+                <div class="timeline-dot"><i class="fas fa-calendar-alt"></i></div>
+                <div class="timeline-date">1969</div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <p>Inicio formal de labores académicas (1 de marzo)</p>
+                </div>
+                <div class="timeline-dot"><i class="fas fa-calendar-alt"></i></div>
+                <div class="timeline-date">1973</div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <p>Integración de los centros educativos Las Acacias, Gabriela Mistral, El Carmen y Ancón (Resolución 1228)</p>
+                </div>
+                <div class="timeline-dot"><i class="fas fa-calendar-alt"></i></div>
+                <div class="timeline-date">2002</div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <p>50 Años. Celebración de  bodas de oro con actividades culturales, exposiciones fotográficas, eventos deportivos, noches de gala y homenaje al legado educativo que ha tenido en la región.</p>
+                </div>
+                <div class="timeline-dot"><i class="fas fa-calendar-alt"></i></div>
+                <div class="timeline-date">2023</div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <p>Implementación de Jornada Única (de 6 a 11) para fortalecer la calidad educativa.</p>
+                </div>
+                <div class="timeline-dot"><i class="fas fa-calendar-alt"></i></div>
+                <div class="timeline-date">2017</div>
+            </div>
+            <h2 style="color: #0a2a66; text-align:center; text-shadow: 0 0 10px rgba(25, 213, 246, 0.5), 0 0 20px rgb(111, 233, 255);">Orgullosamente INEMita</h2>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>© 2026 Institución Educativa INEM Ibagué</p>
+    </footer>
+
+    <script src="history.js"></script>
+
+</body>
+</html>

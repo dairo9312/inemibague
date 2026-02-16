@@ -1,0 +1,119 @@
+/* Configuración General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 40px 0;
+}
+
+.staff-container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.staff-section {
+    margin-bottom: 80px;
+}
+
+.section-title {
+    color: #0a2a66;
+    border-left: 5px solid #ffc107;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* --- GRIDS PERSONALIZADOS --- */
+
+/* Directivos: 4 columnas */
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Matemáticas: 5 columnas (se llena solo 5 y 5) */
+.grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+/* Naturales y Sociales: Usan la misma lógica de 5 columnas, 
+   el contenido sobrante se centra automáticamente */
+.grid-5-4, .grid-5-3 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+/* --- EFECTO FLIP (GIRO) --- */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 280px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border: 3px solid #0a2a66; /* MARCO AZUL */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flip-card-back {
+    background-color: #0a2a66;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.flip-card-back h3 {
+    font-size: 1.1rem;
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+/* Responsivo para tablets y celulares */
+@media (max-width: 1024px) {
+    .grid-4, .grid-5, .grid-5-4, .grid-5-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-4, .grid-5, .grid-5-4, .grid-5-3 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
