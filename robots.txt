@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dairo9312.github.io/inemibague/sitemap.xml
