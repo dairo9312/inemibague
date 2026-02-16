@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://dairo9312.github.io/inemibague/index.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://dairo9312.github.io/inemibague/history.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://dairo9312.github.io/inemibague/mision-vision.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://dairo9312.github.io/inemibague/sedes.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://dairo9312.github.io/inemibague/Sistemas.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://dairo9312.github.io/inemibague/enviado.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+</urlset>
